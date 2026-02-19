@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maulida Nur Afifah — Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lavender: '#8b5cf6',
+            lavenderLight: '#c4b5fd',
+            softbg: '#fbf9ff',
+            darkText: '#2b2b2b',
+            accent: '#f59e0b'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-softbg text-darkText font-sans overflow-x-hidden">
+
+  <!-- Floating background shapes -->
+  <div class="floating-shape w-64 h-64 bg-lavender top-20 left-10 animate-float"></div>
+  <div class="floating-shape w-40 h-40 bg-accent top-1/3 right-16 animate-float" style="animation-delay:1s"></div>
+  <div class="floating-shape w-32 h-32 bg-lavenderLight bottom-1/4 left-1/4 animate-float" style="animation-delay:2s"></div>
+
+  <!-- NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="font-bold text-xl text-lavender flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-lavender"></span>
+          Maulida<span class="text-gray-400">.</span>
+        </a>
+        <nav class="hidden md:flex gap-7 items-center text-sm">
+          <a href="#home"       class="text-gray-600 hover:text-lavender transition relative group">Beranda<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-lavender transition-all group-hover:w-full"></span></a>
+          <a href="#about"      class="text-gray-600 hover:text-lavender transition relative group">Profil<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-lavender transition-all group-hover:w-full"></span></a>
+          <a href="#skills"     class="text-gray-600 hover:text-lavender transition relative group">Skill<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-lavender transition-all group-hover:w-full"></span></a>
+          <a href="#penugasan"  class="text-gray-600 hover:text-lavender transition relative group">Penugasan<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-lavender transition-all group-hover:w-full"></span></a>
+          <a href="#projects"   class="text-gray-600 hover:text-lavender transition relative group">Proyek<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-lavender transition-all group-hover:w-full"></span></a>
+          <a href="#contact"    class="text-gray-600 hover:text-lavender transition relative group">Kontak<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-lavender transition-all group-hover:w-full"></span></a>
+        </nav>
+        <button id="mobile-menu-button" aria-label="menu" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 py-4 px-6 hidden">
+      <div class="flex flex-col gap-3 text-sm">
+        <a href="#home"      class="text-gray-600 hover:text-lavender py-1">Beranda</a>
+        <a href="#about"     class="text-gray-600 hover:text-lavender py-1">Profil</a>
+        <a href="#skills"    class="text-gray-600 hover:text-lavender py-1">Skill</a>
+        <a href="#penugasan" class="text-gray-600 hover:text-lavender py-1">Penugasan</a>
+        <a href="#projects"  class="text-gray-600 hover:text-lavender py-1">Proyek</a>
+        <a href="#contact"   class="text-gray-600 hover:text-lavender py-1">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- HERO -->
+    <section id="home" class="pt-10 pb-16 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-6 reveal">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+              <span class="gradient-text">Hello</span><br>
+              <span class="text-darkText">Everyone!</span>
+            </h1>
+            <p class="text-lg text-gray-700 max-w-xl">
+              I'm <span class="font-semibold text-darkText">Maulida Nur Afifah</span> — passionate about mobile apps and UI/UX design. I build meaningful apps and enjoy clean, elegant interfaces.
+            </p>
+            <div class="flex items-center gap-4 flex-wrap">
+              <a href="#about" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-lavender to-lavenderLight text-white shadow-md hover:shadow-lg transition-all">
+                <span>Tentang Saya</span>
+                <i class="fas fa-arrow-down text-sm"></i>
+              </a>
+              <a href="#penugasan" class="text-sm text-gray-600 hover:text-lavender transition flex items-center gap-1">
+                <span>Lihat Penugasan</span>
+                <i class="fas fa-external-link-alt text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative flex justify-center md:justify-end reveal">
+            <div class="absolute w-80 h-80 bg-gradient-to-br from-lavender/20 to-accent/20 rounded-full blur-xl animate-pulse-slow"></div>
+            <div class="relative z-10 w-full max-w-md bg-white rounded-2xl p-6 shadow-xl border border-gray-50">
+              <div class="flex flex-col items-center">
+                <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-lavender shadow-lg">
+                  <img src="assets/images/maul.jpg" alt="Foto Profil Maulida" class="w-full h-full object-cover">
+                </div>
+                <h2 class="mt-4 text-2xl font-bold text-darkText">Maulida Nur Afifah</h2>
+                <p class="text-sm text-gray-500 text-center mt-1">Mahasiswa D3 Teknik Informatika<br>Politeknik Negeri Bandung</p>
+                <div class="mt-4 w-full text-sm text-gray-700 space-y-3">
+                  <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-lavender/10 flex items-center justify-center"><i class="fas fa-phone text-lavender text-xs"></i></div><span>0819-9106-1616</span></div>
+                  <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-lavender/10 flex items-center justify-center"><i class="fas fa-envelope text-lavender text-xs"></i></div><span>maulidaa.nurafifah@gmail.com</span></div>
+                  <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-lavender/10 flex items-center justify-center"><i class="fas fa-map-marker-alt text-lavender text-xs"></i></div><span>Bandung, Indonesia</span></div>
+                </div>
+                <div class="mt-5 flex gap-3">
+                  <a href="https://www.linkedin.com/in/maulidaanraffh/" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-lavender hover:text-white transition"><i class="fab fa-linkedin-in text-sm"></i></a>
+                  <a href="https://github.com/maulidaanuraffh" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-lavender hover:text-white transition"><i class="fab fa-github text-sm"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFIL DIRI -->
+    <section id="about" class="py-16 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="section-title text-3xl font-bold text-darkText mb-12 text-center reveal">Profil Diri</h3>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative reveal">
+            <img src="assets/images/maul2.jpg" alt="Foto Maulida" class="rounded-2xl shadow-lg w-full object-cover">
+            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-lavender to-accent rounded-2xl -z-10"></div>
+          </div>
+          <div class="reveal">
+            <h4 class="text-2xl font-bold text-darkText mb-4">Passionate Developer & Designer</h4>
+            <p class="text-gray-600 leading-relaxed mb-5">Saya adalah mahasiswa D3 Teknik Informatika di Politeknik Negeri Bandung yang memiliki ketertarikan mendalam pada pengembangan aplikasi mobile dan desain antarmuka. Saya aktif mempelajari algoritma, prinsip UI/UX, serta berlatih membangun aplikasi Android yang memecahkan masalah nyata pengguna sehari-hari.</p>
+            <div class="mb-5">
+              <h5 class="font-semibold text-darkText mb-3">Minat Utama</h5>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-lavender/10 text-lavender rounded-full text-sm">Mobile Development</span>
+                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">UI/UX Design</span>
+                <span class="px-3 py-1 bg-lavenderLight/20 text-lavender rounded-full text-sm">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skills" class="py-16 bg-gradient-to-br from-white to-lavender/5">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="section-title text-3xl font-bold text-darkText mb-12 text-center reveal">Skill &amp; Minat</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all reveal">
+            <div class="w-12 h-12 rounded-xl bg-lavender/10 flex items-center justify-center mb-4"><i class="fas fa-code text-lavender text-xl"></i></div>
+            <h4 class="text-lg font-bold text-darkText mb-3">Web Dev</h4>
+            <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">HTML &amp; CSS</span><span class="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs">PHP</span><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">JavaScript</span></div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all reveal">
+            <div class="w-12 h-12 rounded-xl bg-lavender/10 flex items-center justify-center mb-4"><i class="fas fa-mobile-alt text-lavender text-xl"></i></div>
+            <h4 class="text-lg font-bold text-darkText mb-3">Mobile Dev</h4>
+            <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">Java</span><span class="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs">Kotlin</span><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">Android Studio</span></div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all reveal">
+            <div class="w-12 h-12 rounded-xl bg-lavender/10 flex items-center justify-center mb-4"><i class="fas fa-palette text-lavender text-xl"></i></div>
+            <h4 class="text-lg font-bold text-darkText mb-3">UI/UX Design</h4>
+            <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">Figma</span><span class="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs">Wireframing</span><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">Prototyping</span></div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all reveal">
+            <div class="w-12 h-12 rounded-xl bg-lavender/10 flex items-center justify-center mb-4"><i class="fas fa-tools text-lavender text-xl"></i></div>
+            <h4 class="text-lg font-bold text-darkText mb-3">Tools &amp; Lainnya</h4>
+            <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">Git &amp; GitHub</span><span class="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs">Problem Solving</span><span class="px-2 py-1 bg-lavender/10 text-lavender rounded-md text-xs">Teamwork</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENUGASAN -->
+    <section id="penugasan" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="section-title text-3xl font-bold text-darkText mb-10 reveal">Penugasan Himakom</h3>
+
+        <!-- Tabs -->
+        <div class="penugasan-tabs reveal">
+          <button class="tab-btn active" data-tab="p2"><i class="fas fa-file-alt mr-1"></i> Penugasan 2 — Persuratan</button>
+          <button class="tab-btn" data-tab="p3"><i class="fas fa-image mr-1"></i> Penugasan 3 — Infografis</button>
+          <button class="tab-btn" data-tab="p4"><i class="fas fa-video mr-1"></i> Penugasan 4 — Video Kreatif</button>
+        </div>
+
+        <!-- Tab P2: TOR PDF Preview -->
+        <div id="tab-p2" class="tab-panel active reveal">
+          <div class="mb-6">
+            <span class="task-badge"><i class="fas fa-info-circle"></i> Penugasan 2</span>
+            <h4 class="text-xl font-bold text-darkText mb-2">Persuratan Kegiatan — TOR LKMM-TH</h4>
+            <p class="text-gray-600 text-sm max-w-2xl leading-relaxed">
+              Membuat Term of Reference (TOR) kegiatan LKMM-TH berdasarkan studi kasus yang diberikan. Konsep dirancang ulang agar lebih efektif dan aplikatif, dengan batas anggaran Rp800.000.
+            </p>
+          </div>
+
+          <div class="pdf-preview-card">
+            <div class="pdf-preview-header">
+              <div class="doc-info">
+                <div class="pdf-icon-wrap"><i class="fas fa-file-pdf"></i></div>
+                <div class="pdf-meta">
+                  <h5>TOR Kegiatan LKMM-TH — Maulida Nur Afifah</h5>
+                  <span>Dokumen PDF · Penugasan 2 Open Recruitment Himakom 2026</span>
+                </div>
+              </div>
+              <a href="penugasan/tor-lkmm-th.pdf" download class="pdf-download-btn">
+                <i class="fas fa-download"></i> Unduh
+              </a>
+            </div>
+
+            <div class="pdf-frame-wrap" id="pdf-frame-container">
+              <iframe
+                id="pdf-iframe"
+                src="assets/docs/FormatTORPergerakan.pdf"
+                title="TOR LKMM-TH"
+                loading="lazy">
+              </iframe>
+            </div>
+
+            <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-between flex-wrap gap-3">
+              <div class="flex items-center gap-4 text-xs text-gray-500">
+                <span><i class="fas fa-calendar-alt mr-1 text-lavender"></i>2026</span>
+                <span><i class="fas fa-user mr-1 text-lavender"></i>Maulida Nur Afifah</span>
+                <span><i class="fas fa-tag mr-1 text-lavender"></i>TOR · RAB · Persuratan</span>
+              </div>
+              <span class="status-chip done"><i class="fas fa-check-circle"></i> Selesai</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab P3: Infografis -->
+        <div id="tab-p3" class="tab-panel reveal">
+          <div class="mb-6">
+            <span class="task-badge"><i class="fas fa-info-circle"></i> Penugasan 3</span>
+            <h4 class="text-xl font-bold text-darkText mb-2">Infografis Informatif</h4>
+            <p class="text-gray-600 text-sm max-w-2xl leading-relaxed">
+              Membuat infografis A3 yang menyampaikan informasi secara ringkas dan visual, memuat data statistik dari sumber kredibel sesuai tema yang dipilih.
+            </p>
+          </div>
+          <div class="media-card">
+            <div class="media-card-header">
+              <div class="media-card-icon green"><i class="fas fa-chart-bar"></i></div>
+              <div>
+                <p class="font-bold text-darkText text-sm">Infografis — Tema: Pendidikan</p>
+                <p class="text-xs text-gray-500 mt-0.5">Format A3 · JPG/PNG/PDF</p>
+              </div>
+              <span class="status-chip soon ml-auto"><i class="fas fa-clock"></i> Coming Soon</span>
+            </div>
+            <div class="media-card-body">
+              <div class="media-placeholder">
+                <img src="assets/images/maul2.jpg" alt="Infografis" class="w-full rounded-xl">
+              </div>
+            </div>
+            <div class="media-action-row">
+              <a href="penugasan/infografis.pdf" class="btn-primary-sm"><i class="fas fa-eye"></i> Lihat File</a>
+              <a href="penugasan/infografis.pdf" download class="btn-outline-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab P4: Video -->
+        <div id="tab-p4" class="tab-panel reveal">
+          <div class="mb-6">
+            <span class="task-badge"><i class="fas fa-info-circle"></i> Penugasan 4</span>
+            <h4 class="text-xl font-bold text-darkText mb-2">Video Kreatif</h4>
+            <p class="text-gray-600 text-sm max-w-2xl leading-relaxed">
+              Video pemaparan untuk menjawab studi kasus terkait program kerja HCW dan Fun Rutin Himakom, mencakup perkenalan diri, analisis risiko, dan solusi strategis.
+            </p>
+          </div>
+          <div class="media-card">
+            <div class="media-card-header">
+              <div class="media-card-icon orange"><i class="fas fa-film"></i></div>
+              <div>
+                <p class="font-bold text-darkText text-sm">Video Kreatif — Open Recruitment Himakom 2026</p>
+                <p class="text-xs text-gray-500 mt-0.5">Format MP4/MKV</p>
+              </div>
+              <span class="status-chip soon ml-auto"><i class="fas fa-clock"></i> Coming Soon</span>
+            </div>
+            <div class="media-card-body">
+              <div class="media-placeholder">
+                <video controls class="w-full rounded-xl" src="assets/video/video.mkv"></video>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section id="projects" class="py-16 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-12">
+          <h3 class="section-title text-3xl font-bold text-darkText reveal">Portofolio Proyek</h3>
+          <p class="text-gray-500 text-sm mt-2 md:mt-0 reveal">4 Projects — recent work</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <article class="project-card bg-white rounded-2xl p-6 shadow-card reveal">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-2/5">
+                <img src="assets/images//project1.png" alt="Jackal Holidays App" class="w-full h-64 md:h-72 object-cover rounded-xl">
+              </div>
+              <div class="md:w-3/5">
+                <span class="status-chip done mb-2 inline-flex"><i class="fas fa-check-circle"></i> Selesai</span>
+                <h4 class="text-lg font-bold text-darkText">Jackal Holidays App</h4>
+                <p class="mt-2 text-gray-500 text-sm">Aplikasi Android untuk memesan tiket travel Jackal Holidays.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="text-xs bg-lavender/10 text-lavender px-2 py-1 rounded">Kotlin</span>
+                  <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">MVVM</span>
+                </div>
+                <div class="mt-6 flex gap-3">
+                  <a href="https://play.google.com/store/apps/details?id=com.trust.android.jackalholiday" class="btn-primary-sm"><i class="fas fa-download"></i> Download</a>
+                  <a href="#" class="btn-outline-sm"><i class="fas fa-eye"></i> Detail</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card bg-white rounded-2xl p-6 shadow-md reveal">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-2/5">
+                <img src="src/project2.jpg" alt="Mengenal Nama Bulan" class="w-full h-64 md:h-72 object-cover rounded-xl"></div>
+              <div class="md:w-3/5">
+                <span class="status-chip wip mb-2 inline-flex"><i class="fas fa-spinner"></i> In Progress</span>
+                <h4 class="text-lg font-bold text-darkText">LKS Metaverse</h4>
+                <p class="mt-2 text-gray-500 text-sm">Lorem ipsum dolor sit amet conse perferendis, essitatibus expedita! Velit eius ex autem laborum..</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="text-xs bg-lavender/10 text-lavender px-2 py-1 rounded">3D</span>
+                  <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Graphics</span>
+                  <span class="text-xs bg-lavender/10 text-lavender px-2 py-1 rounded">Sketchup</span>
+                  <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Blender</span>
+                </div>
+                <div class="mt-5 flex gap-2">
+                  <a href="https://youtu.be/6nyema8ZBrQ?si=h4WFV4-G7tzWxuic" class="btn-primary-sm"><i class="fab fa-youtube"></i> Youtube</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card bg-white rounded-2xl p-6 shadow-card reveal">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-2/5">
+                <img src="assets/images/project3.png" alt="Peminjaman Alat" class="w-full h-64 md:h-72 object-cover rounded-xl">
+              </div>
+              <div class="md:w-3/5">
+                <span class="status-chip done mb-2 inline-flex"><i class="fas fa-check-circle"></i> Selesai</span>
+                <h4 class="text-lg font-bold text-darkText">Peminjaman Alat</h4>
+                <p class="mt-2 text-gray-600 text-sm">Aplikasi Android untuk peminjaman alat milik jurusan.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="text-xs bg-lavender/20 text-lavender px-2 py-1 rounded">Java</span>
+                  <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">MySQL</span></div>
+                <div class="mt-6 flex gap-3">
+                  <a href="https://github.com/maulidaanuraffh/peminjaman-alat" class="btn-primary-sm"><i class="fas fa-code-branch"></i> GitHub</a>
+                  <a href="#" class="btn-outline-sm"><i class="fas fa-eye"></i> Detail</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card bg-white rounded-2xl p-6 shadow-md reveal">
+            <div class="flex flex-col md:flex-row gap-5">
+              <div class="md:w-2/5"><img src="assets/images/project4.png" alt="Admin Peminjaman Alat" class="w-full  h-64 md:h-72 object-cover rounded-xl"></div>
+              <div class="md:w-3/5">
+                <span class="status-chip done mb-2 inline-flex"><i class="fas fa-check-circle"></i> Selesai</span>
+                <h4 class="text-lg font-bold text-darkText">Admin Peminjaman Alat</h4>
+                <p class="mt-2 text-gray-500 text-sm">Aplikasi pengelolaan peminjaman dari sisi admin.</p>
+                <div class="mt-3 flex flex-wrap gap-2"><span class="text-xs bg-lavender/10 text-lavender px-2 py-1 rounded">Java</span><span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">MySQL</span></div>
+                <div class="mt-5 flex gap-2">
+                  <a href="https://github.com/maulidaanuraffh/admin-peminjaman-alat" class="btn-primary-sm"><i class="fas fa-code-branch"></i> GitHub</a>
+                  <a href="#" class="btn-outline-sm"><i class="fas fa-eye"></i> Detail</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section id="experience" class="py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <h3 class="section-title text-3xl font-bold text-darkText mb-12 text-center reveal">Pengalaman</h3>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white rounded-2xl p-6 shadow-md reveal">
+            <div class="flex flex-col md:flex-row md:items-start gap-4">
+              <div class="md:w-1/4"><div class="bg-lavender/10 text-lavender px-3 py-1 rounded-full text-xs font-semibold inline-block">Jan 2024 – Mei 2024</div></div>
+              <div class="md:w-3/4">
+                <h4 class="text-lg font-bold text-darkText">Mobile Apps Developer</h4>
+                <p class="text-lavender text-sm font-semibold mb-3">PT. Trans Berjaya Khatulistiwa (TIKETUX)</p>
+                <ul class="text-gray-600 text-sm space-y-2">
+                  <li class="timeline-item">Mengembangkan antarmuka pengguna aplikasi mobile (UI).</li>
+                  <li class="timeline-item">Mengintegrasikan frontend dengan API untuk fungsionalitas penuh.</li>
+                  <li class="timeline-item">Melakukan debugging &amp; troubleshooting untuk menjaga performa.</li>
+                  <li class="timeline-item">Memperbarui dan meningkatkan sejumlah fitur yang sudah ada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-md reveal">
+            <div class="flex flex-col md:flex-row md:items-start gap-4">
+              <div class="md:w-1/4"><div class="bg-lavender/10 text-lavender px-3 py-1 rounded-full text-xs font-semibold inline-block">April 2023</div></div>
+              <div class="md:w-3/4">
+                <h4 class="text-lg font-bold text-darkText">3D Modeler</h4>
+                <p class="text-lavender text-sm font-semibold mb-3">LKS Metaverse Se-Jawa Barat 2023</p>
+                <ul class="text-gray-600 text-sm space-y-2">
+                  <li class="timeline-item">Merancang model 3D gedung jurusan beserta tekstur dan warna.</li>
+                  <li class="timeline-item">Merakit komponen 3D menjadi lingkungan Metaverse yang koheren.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-lavender/5 to-accent/5">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="section-title text-3xl font-bold text-darkText mb-10 reveal">Hubungi Saya</h3>
+        <div class="flex flex-wrap justify-center gap-4 reveal">
+          <a href="mailto:maulida.nur.tif25@polban.ac.id" class="flex items-center gap-2 px-4 py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition text-sm"><i class="fas fa-envelope text-lavender"></i><span>maulida.nur.tif25@polban.ac.id</span></a>
+          <a href="tel:+6281991061616" class="flex items-center gap-2 px-4 py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition text-sm"><i class="fas fa-phone text-lavender"></i><span>+62 819-9106-1616</span></a>
+          <a href="https://www.linkedin.com/in/maulidaanraffh/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition text-sm"><i class="fab fa-linkedin text-lavender"></i><span>LinkedIn</span></a>
+          <a href="https://github.com/maulidaanuraffh" class="flex items-center gap-2 px-4 py-3 bg-white rounded-xl shadow-md hover:shadow-lg transition text-sm"><i class="fab fa-github text-lavender"></i><span>GitHub</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-white border-t border-gray-100">
+      <div class="max-w-6xl mx-auto px-6 text-center text-gray-400 text-sm">
+        <p>© 2026 Maulida Nur Afifah · Open Recruitment HIMAKOM Politeknik Negeri Bandung</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-lavender text-white rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible z-40 flex items-center justify-center">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Mobile menu
+    document.getElementById('mobile-menu-button').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Back to top
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('opacity-0', window.pageYOffset <= 300);
+      btt.classList.toggle('invisible', window.pageYOffset <= 300);
+    });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Penugasan Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // PDF iframe fallback (jika file belum tersedia)
+    function showPdfFallback() {
+      const wrap = document.getElementById('pdf-frame-container');
+      if (!wrap || wrap.dataset.fallback) return;
+      wrap.dataset.fallback = '1';
+      wrap.innerHTML = `
+        <div class="pdf-placeholder">
+          <i class="fas fa-file-pdf"></i>
+          <p>File PDF belum tersedia.<br>
+             Letakkan file TOR di <code>penugasan/tor-lkmm-th.pdf</code> lalu refresh halaman ini.</p>
+        </div>`;
+    }
+    const pdfIframe = document.getElementById('pdf-iframe');
+    if (pdfIframe) {
+      pdfIframe.addEventListener('error', showPdfFallback);
+      // Fallback jika browser tidak bisa deteksi error pada iframe PDF
+      setTimeout(() => {
+        try {
+          const d = pdfIframe.contentDocument || pdfIframe.contentWindow.document;
+          if (!d || !d.body || d.body.innerHTML.trim() === '') showPdfFallback();
+        } catch(err) { /* cross-origin OK, biarkan iframe tampil */ }
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

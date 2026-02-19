@@ -1,0 +1,364 @@
+/* Custom Properties */
+:root {
+  --lavender: #8b5cf6;
+  --lavender-light: #c4b5fd;
+  --lavender-pale: #ede9fe;
+  --accent: #f59e0b;
+  --accent-pale: #fef3c7;
+  --soft-bg: #fbf9ff;
+  --dark-text: #2b2b2b;
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section Title Underline ── */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #8b5cf6, #f59e0b);
+  border-radius: 2px;
+}
+
+/* ── Skill Bar ── */
+.skill-bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+}
+.skill-progress {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #c4b5fd);
+  transition: width 1.5s ease-in-out;
+}
+
+/* ── Timeline ── */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+}
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% - 8px);
+  background-color: #e5e7eb;
+}
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* ── Project Cards ── */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 25px;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Floating Background Shapes ── */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: all 600ms cubic-bezier(.2, .9, .2, 1);
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+.animate-float      { animation: float 6s ease-in-out infinite; }
+.animate-pulse-slow { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* =============================================
+   PENUGASAN SECTION
+   ============================================= */
+
+/* Tab Navigation */
+.penugasan-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.tab-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: white;
+  color: #6b7280;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.tab-btn:hover {
+  border-color: var(--lavender);
+  color: var(--lavender);
+}
+.tab-btn.active {
+  background: var(--lavender);
+  color: white;
+  box-shadow: 0 4px 14px rgba(139,92,246,0.35);
+}
+
+/* Tab Panels */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── PDF Preview Card ── */
+.pdf-preview-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+.pdf-preview-card:hover {
+  box-shadow: 0 8px 32px rgba(139,92,246,0.15);
+}
+
+.pdf-preview-header {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pdf-preview-header .doc-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.pdf-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: white;
+  flex-shrink: 0;
+}
+.pdf-meta h5 {
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 2px;
+}
+.pdf-meta span {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.78rem;
+}
+.pdf-download-btn {
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+.pdf-download-btn:hover { background: rgba(255,255,255,0.28); }
+
+/* Iframe wrapper */
+.pdf-frame-wrap {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background: #f3f4f6;
+}
+.pdf-frame-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Fallback / placeholder when no real file */
+.pdf-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 320px;
+  background: #f8f7ff;
+  color: #9ca3af;
+}
+.pdf-placeholder i { font-size: 3rem; color: var(--lavender-light); }
+.pdf-placeholder p { font-size: 0.9rem; text-align: center; max-width: 280px; line-height: 1.6; }
+
+/* ── Infografis / Video Cards ── */
+.media-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(139,92,246,0.15);
+}
+.media-card-header {
+  padding: 20px 22px 16px;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.media-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.media-card-icon.green  { background: #ecfdf5; color: #059669; }
+.media-card-icon.orange { background: #fff7ed; color: #ea580c; }
+.media-card-icon.blue   { background: #eff6ff; color: #2563eb; }
+
+.media-card-body {
+  padding: 20px 22px;
+}
+.media-placeholder {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #f8f7ff 0%, #ede9fe 100%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 20px;
+}
+.media-placeholder i {
+  font-size: 2.5rem;
+  color: var(--lavender-light);
+}
+
+.media-action-row {
+  padding: 14px 22px 20px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.btn-primary-sm {
+  padding: 8px 16px;
+  background: var(--lavender);
+  color: white;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+.btn-primary-sm:hover { background: #7c3aed; }
+.btn-outline-sm {
+  padding: 8px 16px;
+  border: 1.5px solid #e5e7eb;
+  color: #6b7280;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.btn-outline-sm:hover { border-color: var(--lavender); color: var(--lavender); }
+
+/* ── Penugasan Description Badge ── */
+.task-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--lavender-pale);
+  color: var(--lavender);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ── Status Chip ── */
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.status-chip.done   { background: #ecfdf5; color: #059669; }
+.status-chip.wip    { background: #fff7ed; color: #d97706; }
+.status-chip.soon   { background: #f3f4f6; color: #6b7280; }
